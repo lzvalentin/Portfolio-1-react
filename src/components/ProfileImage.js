@@ -1,7 +1,5 @@
 import React from 'react';
 import ProfileImage from '../assets/images/self.jpg'
-import "../App.css"
-
 function Bio() {
     return (
         <React.Fragment>
