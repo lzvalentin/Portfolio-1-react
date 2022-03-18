@@ -1,39 +1,48 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-function Nav(props) {
-    const {
-        pages = [],
-        setCurrentPage,
-        currentPage,
-    } = props;
+function NavBar({ currentPage, handlePageChange }) {
+
     return (
-        <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <section className='navbar-container center'>
             <div className="container">
-                <a className="navbar-brand js-scroll-trigger">Sylvia Prabudy</a>
-                <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarResponsive">
-                    <ul className="navbar-nav ml-auto">
-                        {pages.map((Page) => (
-                            <li
-                                className={`nav-item nav-link js-scroll-trigger ${
-                                    currentPage.name === Page.name && 'active'
-                                    }`}
-                                key={Page.name}
-                            >
-                                <span
-                                    onClick={() => setCurrentPage(Page)}
-                                >
-                                    (Page.name)
-                                </span>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                <nav className="navbar fixed-top navbar-light bg-light center d-flex justify-content-center">
+                <ul className="nav nav-tabs">
+                    <li className="nav-item"><span>
+                        <a
+                            href="#about"
+                            onClick={() => handlePageChange('AboutMe')}
+                            className={currentPage === 'About Me' ? 'nav-link active' : 'nav-link'}
+                        >
+                            About Me
+                        </a>
+                    </span>
+                    </li>
+                    <li className="nav-item"><span>
+                        <a
+                            href="#projects"
+                            onClick={() => handlePageChange('Projects')}
+                            className={currentPage === 'Projects' ? 'nav-link active' : 'nav-link'}
+                        >
+                            Projects
+                        </a>
+                    </span>
+                    </li>
+                    <li className="nav-item"><span>
+                        <a
+                            href="#contact"
+                            onClick={() => handlePageChange('Contact')}
+                            className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
+                        >
+                            Contact
+                        </a>
+                    </span>
+                    </li><li className="nav-item">
+                    </li>
+                </ul>
+                </nav>
             </div>
-        </nav>
-    );
+        </section>
+    )
 }
 
-export default Nav;
+export default NavBar;
