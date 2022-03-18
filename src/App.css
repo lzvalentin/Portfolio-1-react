@@ -36,7 +36,7 @@ body {
     text-align: justify;
   }
   
-  img {
+  img.center {
     border-radius: 1000px;
     display: block;
     margin-left: auto;
@@ -75,6 +75,10 @@ body {
     padding-right: 20px;
   }
   
+  .card-title.h5 {
+color:#000000
+  }
+
   .wip{
     background-color: white;
     text-align: center;

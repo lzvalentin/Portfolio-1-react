@@ -38,9 +38,9 @@ function Projects() {
                         </div>
                         <div className="Cardbox" id="thirdCard">
                         <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src="../../assets/images/wkday.png" />
+                            <Card.Img variant="top" src="https://github.com/lzvalentin/Portfolio-1-react/blob/main/src/assets/images/wkday.png?raw=true" />
                             <Card.Body>
-                                <Card.Title>Note Taker</Card.Title>
+                                <Card.Title>Scheduler</Card.Title>
                                 <Card.Text>
                                 </Card.Text>
                                 <Button variant="primary" href="https://lzvalentin.github.io/Work-Day-Scheduler//" target="_blank" rel="noreferrer">
